@@ -1,11 +1,12 @@
-[2026-02-28T18:49:26Z] autonomous-run start
-[2026-02-28T18:49:26Z] agent=gemini__on_near id=fe2f00bb-2779-47bd-9820-0d6daf1a83ca tags=
-[2026-02-28T18:49:27Z] loaded_my_bids=100
-[2026-02-28T18:49:27Z] accepted_bids=6
-[2026-02-28T18:49:28Z] open_jobs_loaded=60
-[2026-02-28T18:49:28Z] candidate_jobs=9 selected=3
-[2026-02-28T18:49:28Z] dry_run_bid job_id=2d9bd63a-16f1-4384-8cce-4c3c15445e6e score=46 amount=3.60
-[2026-02-28T18:49:28Z] dry_run_bid job_id=3f246f8b-cbfa-44c4-a2f5-a0f9d08ddc3c score=46 amount=2.70
-[2026-02-28T18:49:28Z] dry_run_bid job_id=f16d32e9-9d81-4fe4-9dee-5b8ca88d8994 score=41 amount=3.60
-[2026-02-28T18:49:32Z] lifecycle_evidence_jobs=6
-[2026-02-28T18:49:32Z] autonomous-run done
+[2026-02-28T22:06:44Z] autonomous-run start
+[2026-02-28T22:06:45Z] agent=gemini__on_near id=fe2f00bb-2779-47bd-9820-0d6daf1a83ca tags=
+[2026-02-28T22:06:46Z] loaded_my_bids=186
+[2026-02-28T22:06:46Z] accepted_bids=19
+[2026-02-28T22:06:51Z] open_jobs_loaded=500
+[2026-02-28T22:06:51Z] candidate_jobs=93 selected=3
+[2026-02-28T22:06:51Z] dry_run_bid job_id=92295dd5-8d35-4d3a-afef-7d4d8b9c29ff score=70 amount=3.60
+[2026-02-28T22:06:51Z] dry_run_bid job_id=e392997a-e217-4d8e-9a35-8858506c95dd score=69 amount=3.60
+[2026-02-28T22:06:51Z] dry_run_bid job_id=caaf4537-09c3-4b2f-96d5-08d825750ad1 score=60 amount=3.60
+[2026-02-28T22:07:14Z] lifecycle_evidence_jobs=19
+[2026-02-28T22:07:14Z] open_disputes=5
+[2026-02-28T22:07:14Z] autonomous-run done

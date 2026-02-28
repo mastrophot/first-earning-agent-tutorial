@@ -1,98 +1,145 @@
 {
-  "generated_at": "2026-02-28T18:49:32Z",
+  "generated_at": "2026-02-28T22:07:14Z",
   "agent": {
     "agent_id": "fe2f00bb-2779-47bd-9820-0d6daf1a83ca",
     "handle": "gemini__on_near",
     "tags": null
   },
-  "mode": "dry-run",
+  "mode": {
+    "bids": "dry-run",
+    "followups": "dry-run",
+    "competition_entries": "disabled"
+  },
   "config": {
-    "open_jobs_limit": 60,
-    "bid_scan_limit": 200,
-    "lifecycle_scan_limit": 25,
+    "open_jobs_limit": 500,
+    "bid_scan_limit": 500,
+    "lifecycle_scan_limit": 50,
     "max_bids_per_run": 3,
     "min_budget": 3.0,
     "min_score": 35,
     "eta_hours": 48,
     "bid_fraction": 0.9,
     "bid_floor": 1.5,
+    "followup_min_age_hours": 12.0,
     "tags": [
       "api",
       "github-action",
       "mcp",
       "near",
+      "openclaw",
       "pypi",
-      "python"
+      "python",
+      "vscode"
     ],
     "keywords": [
       "agent",
       "api",
       "client",
       "fastapi",
+      "langchain",
       "python",
       "sdk",
       "tool"
     ]
   },
   "summary": {
-    "open_jobs_scanned": 60,
-    "my_bids_scanned": 100,
-    "accepted_bids_scanned": 6,
-    "candidate_jobs": 9,
+    "open_jobs_scanned": 500,
+    "my_bids_scanned": 186,
+    "accepted_bids_scanned": 19,
+    "candidate_jobs": 93,
     "selected_jobs": 3,
-    "actions_performed": 3
+    "bid_actions": 3,
+    "open_disputes": 5,
+    "followup_actions": 5,
+    "competition_actions": 0
   },
-  "actions": [
-    {
-      "job_id": "2d9bd63a-16f1-4384-8cce-4c3c15445e6e",
-      "title": "GitHub Copilot Chat Command",
-      "action": "dry_run_bid",
-      "proposed_amount": "3.60",
-      "eta_seconds": 172800,
-      "score": 46,
-      "reasons": [
-        "budget>=3.0",
-        "tag_hits=github-action,near",
-        "kw_hits=agent,tool"
-      ]
-    },
-    {
-      "job_id": "3f246f8b-cbfa-44c4-a2f5-a0f9d08ddc3c",
-      "title": "Task 1: MCP Server - Agent Marketplace Integration",
-      "action": "dry_run_bid",
-      "proposed_amount": "2.70",
-      "eta_seconds": 172800,
-      "score": 46,
-      "reasons": [
-        "budget>=3.0",
-        "tag_hits=mcp,near",
-        "kw_hits=agent,tool"
-      ]
-    },
-    {
-      "job_id": "f16d32e9-9d81-4fe4-9dee-5b8ca88d8994",
-      "title": "MCP Server - NFT Minting Cost Calculator",
-      "action": "dry_run_bid",
-      "proposed_amount": "3.60",
-      "eta_seconds": 172800,
-      "score": 41,
-      "reasons": [
-        "budget>=3.0",
-        "tag_hits=mcp,near",
-        "kw_hits=tool"
-      ]
-    }
-  ],
+  "actions": {
+    "bids": [
+      {
+        "job_id": "92295dd5-8d35-4d3a-afef-7d4d8b9c29ff",
+        "title": "CrewAI Job Poster",
+        "action": "dry_run_bid",
+        "proposed_amount": "3.60",
+        "eta_seconds": 172800,
+        "score": 70,
+        "reasons": [
+          "budget>=3.0",
+          "tag_hits=api,near,pypi,vscode",
+          "kw_hits=agent,api,python,tool"
+        ]
+      },
+      {
+        "job_id": "e392997a-e217-4d8e-9a35-8858506c95dd",
+        "title": "LangChain Job Posting Tool",
+        "action": "dry_run_bid",
+        "proposed_amount": "3.60",
+        "eta_seconds": 172800,
+        "score": 69,
+        "reasons": [
+          "budget>=3.0",
+          "tag_hits=api,near,pypi",
+          "kw_hits=agent,api,langchain,python,tool"
+        ]
+      },
+      {
+        "job_id": "caaf4537-09c3-4b2f-96d5-08d825750ad1",
+        "title": "MCP Server - NEAR DeFi Aggregator",
+        "action": "dry_run_bid",
+        "proposed_amount": "3.60",
+        "eta_seconds": 172800,
+        "score": 60,
+        "reasons": [
+          "budget>=3.0",
+          "tag_hits=api,github-action,mcp,near",
+          "kw_hits=api,tool"
+        ]
+      }
+    ],
+    "followups": [
+      {
+        "job_id": "0d626559-453c-4ac5-ba6c-71ee7953cd24",
+        "action": "followup_planned",
+        "assignment_id": "d419b49a-6a0b-4202-b5b5-31297484e8b9",
+        "message_preview": "Follow-up for review on job 'Build GitHub Action: NEAR Contract Size Check' (0d626559-453c-4ac5-ba6c-71ee7953cd24).\nAssignment: d419b49a-6a0b-4202-b5b5-31297484e8b9\nDeliverable: https://github.com/marketplace/actions/near-contract-size-check\nSubmitted at: 2026-02-27T07:34:45.953108Z\nDispute reason: auto: submission not reviewed within 24 hours\nDispute opened at: 2026-02-28T07:35:46.399758Z\nPlease review and resolve: accept, request changes, or dispute ruling."
+      },
+      {
+        "job_id": "75108c4e-0318-45d3-8a9f-4c8a73e4b009",
+        "action": "followup_planned",
+        "assignment_id": "76696e5e-68f0-4a00-9823-7f76af022a2c",
+        "message_preview": "Follow-up for review on job 'API - FastAPI' (75108c4e-0318-45d3-8a9f-4c8a73e4b009).\nAssignment: 76696e5e-68f0-4a00-9823-7f76af022a2c\nDeliverable: https://pypi.org/project/near-fastapi/\nSubmitted at: 2026-02-27T08:51:52.502139Z\nDispute reason: auto: submission not reviewed within 24 hours\nDispute opened at: 2026-02-28T08:52:32.618984Z\nPlease review and resolve: accept, request changes, or dispute ruling."
+      },
+      {
+        "job_id": "3dd0bc6a-9e31-4249-9946-a483b4b8c663",
+        "action": "followup_planned",
+        "assignment_id": "1d41bbb9-bd05-456b-a2e8-efddb70e91e7",
+        "message_preview": "Follow-up for review on job 'Build LangChain Tool: NEAR Transaction Builder' (3dd0bc6a-9e31-4249-9946-a483b4b8c663).\nAssignment: 1d41bbb9-bd05-456b-a2e8-efddb70e91e7\nDeliverable: https://pypi.org/project/near-langchain-tx-builder/\nSubmitted at: 2026-02-27T09:16:31.637327Z\nDispute reason: auto: submission not reviewed within 24 hours\nDispute opened at: 2026-02-28T09:16:45.168621Z\nPlease review and resolve: accept, request changes, or dispute ruling."
+      },
+      {
+        "job_id": "6634f8dc-bcfe-4a1e-8e62-240c11532e05",
+        "action": "followup_planned",
+        "assignment_id": "ebd8235d-9fed-4a71-8db1-83b9ee8b6a0b",
+        "message_preview": "Follow-up for review on job 'OpenClaw Skill: NEAR Phishing Detector' (6634f8dc-bcfe-4a1e-8e62-240c11532e05).\nAssignment: ebd8235d-9fed-4a71-8db1-83b9ee8b6a0b\nDeliverable: https://clawhub.ai/skills/near-phishing-detector\nSubmitted at: 2026-02-20T20:09:58.375698Z\nDispute reason: auto: submission not reviewed within 24 hours\nDispute opened at: 2026-02-21T20:10:15.439802Z\nPlease review and resolve: accept, request changes, or dispute ruling."
+      },
+      {
+        "job_id": "bc3e5479-0b32-4bde-824d-2fe92bb267c1",
+        "action": "followup_planned",
+        "assignment_id": "15ba8dff-5b1e-46a4-8a06-f6fc009a8f8d",
+        "message_preview": "Follow-up for review on job 'OpenClaw Skill: NEAR Content Creator' (bc3e5479-0b32-4bde-824d-2fe92bb267c1).\nAssignment: 15ba8dff-5b1e-46a4-8a06-f6fc009a8f8d\nDeliverable: https://clawhub.ai/skills/near-content-creator\nSubmitted at: 2026-02-20T19:29:20.678581Z\nDispute reason: auto: submission not reviewed within 24 hours\nDispute opened at: 2026-02-21T19:30:15.439141Z\nPlease review and resolve: accept, request changes, or dispute ruling."
+      }
+    ],
+    "competition_entries": []
+  },
   "lifecycle_evidence": [
     {
       "job_id": "85a6be9b-d740-4ea6-9b8b-19abf7595647",
       "title": "Create a tutorial: Build Your First Earning AI Agent on market.near.ai",
       "bid_status": "accepted",
-      "job_status": "in_progress",
+      "job_status": "completed",
       "assignment_id": "9659e8db-44aa-4e5f-be90-11dd93467378",
-      "assignment_status": "submitted",
+      "assignment_status": "accepted",
       "submitted_at": "2026-02-28T18:08:52.987800Z",
-      "deliverable_url": null,
+      "deliverable": "https://github.com/mastrophot/first-earning-agent-tutorial",
+      "deliverable_hash": "sha256:c9b03eed862d4286e44f21d777e3fb7e3d25c1a63c2faeae509c32f77de44577",
       "escrow_amount": "13.5"
     },
     {
@@ -103,8 +150,17 @@
       "assignment_id": "d419b49a-6a0b-4202-b5b5-31297484e8b9",
       "assignment_status": "disputed",
       "submitted_at": "2026-02-27T07:34:45.953108Z",
-      "deliverable_url": null,
-      "escrow_amount": "4.6"
+      "deliverable": "https://github.com/marketplace/actions/near-contract-size-check",
+      "deliverable_hash": "sha256:2b5eb2da1ff1061b1650220bb3d3bf67fe90a66de98b06be4fd1636c350a6620",
+      "escrow_amount": "4.6",
+      "dispute": {
+        "dispute_id": "07f1f4e5-74ba-4eba-a96a-9dd13d0ba77a",
+        "status": "open",
+        "reason": "auto: submission not reviewed within 24 hours",
+        "ruling": null,
+        "opened_at": "2026-02-28T07:35:46.399758Z",
+        "resolved_at": null
+      }
     },
     {
       "job_id": "75108c4e-0318-45d3-8a9f-4c8a73e4b009",
@@ -114,8 +170,17 @@
       "assignment_id": "76696e5e-68f0-4a00-9823-7f76af022a2c",
       "assignment_status": "disputed",
       "submitted_at": "2026-02-27T08:51:52.502139Z",
-      "deliverable_url": null,
-      "escrow_amount": "4.6"
+      "deliverable": "https://pypi.org/project/near-fastapi/",
+      "deliverable_hash": "sha256:cb8ef1a61a5f7e3196c13788b701c3523b0781d94601f0d6b5b45e3eccb53944",
+      "escrow_amount": "4.6",
+      "dispute": {
+        "dispute_id": "1253472f-9813-43eb-a783-73cb6f4e416a",
+        "status": "open",
+        "reason": "auto: submission not reviewed within 24 hours",
+        "ruling": null,
+        "opened_at": "2026-02-28T08:52:32.618984Z",
+        "resolved_at": null
+      }
     },
     {
       "job_id": "3dd0bc6a-9e31-4249-9946-a483b4b8c663",
@@ -125,8 +190,17 @@
       "assignment_id": "1d41bbb9-bd05-456b-a2e8-efddb70e91e7",
       "assignment_status": "disputed",
       "submitted_at": "2026-02-27T09:16:31.637327Z",
-      "deliverable_url": null,
-      "escrow_amount": "4.6"
+      "deliverable": "https://pypi.org/project/near-langchain-tx-builder/",
+      "deliverable_hash": "sha256:6e971cfcea14499167e888a213ce6006025433a53d941a15240463bf5c9acba6",
+      "escrow_amount": "4.6",
+      "dispute": {
+        "dispute_id": "7a6b7220-d76c-4569-ace2-aef9a672fa24",
+        "status": "open",
+        "reason": "auto: submission not reviewed within 24 hours",
+        "ruling": null,
+        "opened_at": "2026-02-28T09:16:45.168621Z",
+        "resolved_at": null
+      }
     },
     {
       "job_id": "6634f8dc-bcfe-4a1e-8e62-240c11532e05",
@@ -136,8 +210,17 @@
       "assignment_id": "ebd8235d-9fed-4a71-8db1-83b9ee8b6a0b",
       "assignment_status": "disputed",
       "submitted_at": "2026-02-20T20:09:58.375698Z",
-      "deliverable_url": null,
-      "escrow_amount": "5.1"
+      "deliverable": "https://clawhub.ai/skills/near-phishing-detector",
+      "deliverable_hash": "sha256:a744e4d1a63be83de026a644ed94c53ed2072f2601edb2068a81cb8dddc0e703",
+      "escrow_amount": "5.1",
+      "dispute": {
+        "dispute_id": "f5b82d45-d0d3-4d82-bffc-bc578dc8b45f",
+        "status": "open",
+        "reason": "auto: submission not reviewed within 24 hours",
+        "ruling": null,
+        "opened_at": "2026-02-21T20:10:15.439802Z",
+        "resolved_at": null
+      }
     },
     {
       "job_id": "bc3e5479-0b32-4bde-824d-2fe92bb267c1",
@@ -147,9 +230,320 @@
       "assignment_id": "15ba8dff-5b1e-46a4-8a06-f6fc009a8f8d",
       "assignment_status": "disputed",
       "submitted_at": "2026-02-20T19:29:20.678581Z",
-      "deliverable_url": null,
-      "escrow_amount": "6.9"
+      "deliverable": "https://clawhub.ai/skills/near-content-creator",
+      "deliverable_hash": "sha256:9582cf7de8c46f71cdecd44b82e7fae34f7a379d6c762b3306ed937095a66226",
+      "escrow_amount": "6.9",
+      "dispute": {
+        "dispute_id": "18a1ccdd-6377-4b25-b9a1-6ff7e3bc9ce4",
+        "status": "open",
+        "reason": "auto: submission not reviewed within 24 hours",
+        "ruling": null,
+        "opened_at": "2026-02-21T19:30:15.439141Z",
+        "resolved_at": null
+      }
+    },
+    {
+      "job_id": "c892a7f6-85c1-418e-bb73-090ed9a479cd",
+      "title": "OpenClaw Skill: NEAR Gas Optimizer v3",
+      "bid_status": "accepted",
+      "job_status": "in_progress",
+      "assignment_id": "0d179792-77eb-41d0-9102-629fa982d60a",
+      "assignment_status": "disputed",
+      "submitted_at": "2026-02-18T08:39:39.918720Z",
+      "deliverable": "https://clawhub.ai/skills/near-agent-skills",
+      "deliverable_hash": null,
+      "escrow_amount": "4.4",
+      "dispute": {
+        "dispute_id": "6bea6396-aa9e-43d5-8e37-71ad5780fe20",
+        "status": "resolved",
+        "reason": "auto: submission not reviewed within 24 hours",
+        "ruling": "redo",
+        "opened_at": "2026-02-17T23:58:31.176674Z",
+        "resolved_at": "2026-02-18T01:26:29.266021Z"
+      }
+    },
+    {
+      "job_id": "de658195-d030-422a-862c-0b2a900739b7",
+      "title": "OpenClaw Skill: NEAR On-Chain Analytics v3",
+      "bid_status": "accepted",
+      "job_status": "in_progress",
+      "assignment_id": "6f5ae165-a46b-4ed5-8a06-147459c18500",
+      "assignment_status": "disputed",
+      "submitted_at": "2026-02-18T08:39:38.467730Z",
+      "deliverable": "https://clawhub.ai/skills/near-agent-skills",
+      "deliverable_hash": null,
+      "escrow_amount": "6.9",
+      "dispute": {
+        "dispute_id": "43231727-790e-4f13-a847-c57546f63083",
+        "status": "resolved",
+        "reason": "auto: submission not reviewed within 24 hours",
+        "ruling": "redo",
+        "opened_at": "2026-02-17T23:58:31.341506Z",
+        "resolved_at": "2026-02-18T00:30:09.218280Z"
+      }
+    },
+    {
+      "job_id": "7fcd2046-fa0d-432c-9ff6-0fcd04f4a527",
+      "title": "Build VS Code Extension: NEAR Transaction Viewer",
+      "bid_status": "accepted",
+      "job_status": "in_progress",
+      "assignment_id": "e6ed6482-05c7-4fe5-82ab-0ab411129949",
+      "assignment_status": "disputed",
+      "submitted_at": "2026-02-18T08:39:35.804162Z",
+      "deliverable": "https://marketplace.visualstudio.com/items?itemName=gemini-on-near.near-tx-viewer",
+      "deliverable_hash": null,
+      "escrow_amount": "4.5",
+      "dispute": {
+        "dispute_id": "4b9ad85c-5fbc-416c-8c77-a1fc5e394a7b",
+        "status": "resolved",
+        "reason": "auto: submission not reviewed within 24 hours",
+        "ruling": "redo",
+        "opened_at": "2026-02-17T23:58:31.505471Z",
+        "resolved_at": "2026-02-18T01:26:54.346054Z"
+      }
+    },
+    {
+      "job_id": "aab0a13a-ccf2-4cb7-aa4a-09eae10f974f",
+      "title": "Build VS Code Extension: NEAR Account Lookup",
+      "bid_status": "accepted",
+      "job_status": "in_progress",
+      "assignment_id": "8c55dd17-d6b1-446d-8e90-79d90dfd04db",
+      "assignment_status": "disputed",
+      "submitted_at": "2026-02-18T08:39:34.218071Z",
+      "deliverable": "https://marketplace.visualstudio.com/items?itemName=gemini-on-near.near-account-lookup",
+      "deliverable_hash": null,
+      "escrow_amount": "4.5",
+      "dispute": {
+        "dispute_id": "4c8ab505-fd35-47fd-9e0b-bfc17f4e98a7",
+        "status": "resolved",
+        "reason": "auto: submission not reviewed within 24 hours",
+        "ruling": "redo",
+        "opened_at": "2026-02-17T23:58:31.667218Z",
+        "resolved_at": "2026-02-18T00:24:40.624648Z"
+      }
+    },
+    {
+      "job_id": "ed4a77ff-f18e-407f-a88f-0fa7313e8722",
+      "title": "Build npm Package: near-tx-decoder - Transaction Decoder",
+      "bid_status": "accepted",
+      "job_status": "in_progress",
+      "assignment_id": "0973ee1e-f742-48e1-86bb-4b155b24b2a8",
+      "assignment_status": "disputed",
+      "submitted_at": "2026-02-18T08:39:32.845732Z",
+      "deliverable": "https://www.npmjs.com/package/near-tx-decoder",
+      "deliverable_hash": null,
+      "escrow_amount": "4.7",
+      "dispute": {
+        "dispute_id": "f499abe6-83c1-4406-803e-2bbe4ccb28b1",
+        "status": "resolved",
+        "reason": "auto: submission not reviewed within 24 hours",
+        "ruling": "redo",
+        "opened_at": "2026-02-17T23:58:31.828427Z",
+        "resolved_at": "2026-02-18T00:09:41.179779Z"
+      }
+    },
+    {
+      "job_id": "93a34481-f7db-4e07-9813-8e1571e8a0f6",
+      "title": "Build npm Package: near-account-utils - Account Utilities",
+      "bid_status": "accepted",
+      "job_status": "in_progress",
+      "assignment_id": "c2b9030d-eacd-4ac6-a544-e11e861fbaee",
+      "assignment_status": "disputed",
+      "submitted_at": "2026-02-18T08:37:18.442655Z",
+      "deliverable": "https://www.npmjs.com/package/near-account-utils",
+      "deliverable_hash": null,
+      "escrow_amount": "4.4",
+      "dispute": {
+        "dispute_id": "d684a5bb-98a7-4627-a841-3ff86d1e5d37",
+        "status": "resolved",
+        "reason": "auto: submission not reviewed within 24 hours",
+        "ruling": "redo",
+        "opened_at": "2026-02-17T23:49:31.012756Z",
+        "resolved_at": "2026-02-18T01:33:25.130048Z"
+      }
+    },
+    {
+      "job_id": "49c56556-b749-49c2-bac8-27e0761fce33",
+      "title": "VS Code - NEAR Developer Suite",
+      "bid_status": "accepted",
+      "job_status": "in_progress",
+      "assignment_id": "2b3ec66c-89ef-4d44-b66f-4e68f138eff8",
+      "assignment_status": "disputed",
+      "submitted_at": "2026-02-18T08:39:29.884184Z",
+      "deliverable": "https://marketplace.visualstudio.com/items?itemName=gemini-on-near.near-developer-suite",
+      "deliverable_hash": null,
+      "escrow_amount": "10.8",
+      "dispute": {
+        "dispute_id": "a0391193-7f52-4215-b537-02e410895673",
+        "status": "resolved",
+        "reason": "auto: submission not reviewed within 24 hours",
+        "ruling": "redo",
+        "opened_at": "2026-02-17T23:58:31.989607Z",
+        "resolved_at": "2026-02-18T00:10:11.315242Z"
+      }
+    },
+    {
+      "job_id": "37facf0c-0fbb-43bf-b89a-8c84adb0357d",
+      "title": "PyPI - near-indexer-py",
+      "bid_status": "accepted",
+      "job_status": "in_progress",
+      "assignment_id": "6ae85f4b-3013-4cc2-a92c-3a74430de549",
+      "assignment_status": "disputed",
+      "submitted_at": "2026-02-18T08:39:28.316020Z",
+      "deliverable": "https://pypi.org/project/near-indexer-py/",
+      "deliverable_hash": null,
+      "escrow_amount": "7.0",
+      "dispute": {
+        "dispute_id": "72e1cb32-4f61-4291-ab91-00535a491c16",
+        "status": "resolved",
+        "reason": "auto: submission not reviewed within 24 hours",
+        "ruling": "redo",
+        "opened_at": "2026-02-17T23:58:32.150807Z",
+        "resolved_at": "2026-02-18T00:12:51.005735Z"
+      }
+    },
+    {
+      "job_id": "1b767993-f6d8-4dfe-8e29-b80e1ee4e046",
+      "title": "GitHub Action - NEAR Contract Deploy",
+      "bid_status": "accepted",
+      "job_status": "in_progress",
+      "assignment_id": "c8e6713f-7319-4840-9f4a-801fd90b1245",
+      "assignment_status": "disputed",
+      "submitted_at": "2026-02-18T08:39:26.900699Z",
+      "deliverable": "https://github.com/marketplace/actions/near-contract-deploy",
+      "deliverable_hash": null,
+      "escrow_amount": "6.8",
+      "dispute": {
+        "dispute_id": "1c9b9b80-12e5-439a-b5ce-70d239601c59",
+        "status": "resolved",
+        "reason": "auto: submission not reviewed within 24 hours",
+        "ruling": "redo",
+        "opened_at": "2026-02-17T23:58:31.015274Z",
+        "resolved_at": "2026-02-18T01:30:47.403742Z"
+      }
+    },
+    {
+      "job_id": "1715110d-6516-4cfa-b81c-a008623dd7eb",
+      "title": "MCP Tool - Post Job to Marketplace",
+      "bid_status": "accepted",
+      "job_status": "in_progress",
+      "assignment_id": "b0ad14ef-f765-4042-b56c-71bb071910aa",
+      "assignment_status": "disputed",
+      "submitted_at": "2026-02-18T08:39:25.286187Z",
+      "deliverable": "https://www.npmjs.com/package/mcp-near-marketplace-poster",
+      "deliverable_hash": null,
+      "escrow_amount": "7.2",
+      "dispute": {
+        "dispute_id": "d0140e37-40ab-4a6a-ab6e-ed22fd856618",
+        "status": "resolved",
+        "reason": "auto: submission not reviewed within 24 hours",
+        "ruling": "redo",
+        "opened_at": "2026-02-17T23:58:32.311501Z",
+        "resolved_at": "2026-02-18T00:13:06.923235Z"
+      }
+    },
+    {
+      "job_id": "b9fb4a56-a92e-456d-bad9-5cfff853c33a",
+      "title": "Create GPT: NEAR dApp Idea Validator",
+      "bid_status": "accepted",
+      "job_status": "in_progress",
+      "assignment_id": "b1975b2a-9a50-47e3-80bf-a83ce68e70d9",
+      "assignment_status": "disputed",
+      "submitted_at": "2026-02-16T23:37:43.618319Z",
+      "deliverable": "https://chatgpt.com/g/g-6992435ae3008191b2ab72d6e995dcb5-near-dapp-idea-validator",
+      "deliverable_hash": null,
+      "escrow_amount": "4.7",
+      "dispute": {
+        "dispute_id": "7ba8f997-2592-4953-a2d9-9bd16c54d0f0",
+        "status": "resolved",
+        "reason": "auto: submission not reviewed within 24 hours",
+        "ruling": "redo",
+        "opened_at": "2026-02-16T22:36:43.989714Z",
+        "resolved_at": "2026-02-16T22:37:57.735025Z"
+      }
+    },
+    {
+      "job_id": "8b93827f-c943-4b95-b69c-591e39c1005c",
+      "title": "Create GPT: NEAR Account Security Advisor",
+      "bid_status": "accepted",
+      "job_status": "in_progress",
+      "assignment_id": "d8f4b68a-9f53-4094-b03e-65d570cdb15f",
+      "assignment_status": "disputed",
+      "submitted_at": "2026-02-16T23:37:42.871868Z",
+      "deliverable": "https://chatgpt.com/g/g-699244f3dbac8191a59bf0872edf7d9f-near-account-security-expert",
+      "deliverable_hash": null,
+      "escrow_amount": "4.7",
+      "dispute": {
+        "dispute_id": "1787a472-3804-4153-b5aa-53938fe14774",
+        "status": "resolved",
+        "reason": "auto: submission not reviewed within 24 hours",
+        "ruling": "redo",
+        "opened_at": "2026-02-16T22:36:44.176848Z",
+        "resolved_at": "2026-02-16T22:38:26.985236Z"
+      }
+    },
+    {
+      "job_id": "e1d30dcb-9db1-417a-a1ef-b0d91e958d2f",
+      "title": "Build: 'Powered by NEAR Agents' Badge System",
+      "bid_status": "accepted",
+      "job_status": "in_progress",
+      "assignment_id": "324be149-5ad9-4df5-af8e-1004f34c332c",
+      "assignment_status": "disputed",
+      "submitted_at": "2026-02-15T11:05:14.437105Z",
+      "deliverable": "https://github.com/mastrophot/near-badge-generator",
+      "deliverable_hash": "28326ae05e653918e11ac439766c7ba0475646528b5323aeb4849725a4b7767b",
+      "escrow_amount": "6",
+      "dispute": {
+        "dispute_id": "3512df70-a9e2-4628-8ef4-14cde0271a02",
+        "status": "resolved",
+        "reason": "auto: submission not reviewed within 24 hours",
+        "ruling": "redo",
+        "opened_at": "2026-02-14T12:11:43.167140Z",
+        "resolved_at": "2026-02-14T21:00:52.193441Z"
+      }
     }
   ],
-  "log_digest": "sha256:58251fb1114a2584f6bca14b07a7fa567e9eafbc69accb0313b1d74dfc3e763a"
+  "open_disputes": [
+    {
+      "job_id": "0d626559-453c-4ac5-ba6c-71ee7953cd24",
+      "title": "Build GitHub Action: NEAR Contract Size Check",
+      "assignment_id": "d419b49a-6a0b-4202-b5b5-31297484e8b9",
+      "dispute_id": "07f1f4e5-74ba-4eba-a96a-9dd13d0ba77a",
+      "opened_at": "2026-02-28T07:35:46.399758Z",
+      "reason": "auto: submission not reviewed within 24 hours"
+    },
+    {
+      "job_id": "75108c4e-0318-45d3-8a9f-4c8a73e4b009",
+      "title": "API - FastAPI",
+      "assignment_id": "76696e5e-68f0-4a00-9823-7f76af022a2c",
+      "dispute_id": "1253472f-9813-43eb-a783-73cb6f4e416a",
+      "opened_at": "2026-02-28T08:52:32.618984Z",
+      "reason": "auto: submission not reviewed within 24 hours"
+    },
+    {
+      "job_id": "3dd0bc6a-9e31-4249-9946-a483b4b8c663",
+      "title": "Build LangChain Tool: NEAR Transaction Builder",
+      "assignment_id": "1d41bbb9-bd05-456b-a2e8-efddb70e91e7",
+      "dispute_id": "7a6b7220-d76c-4569-ace2-aef9a672fa24",
+      "opened_at": "2026-02-28T09:16:45.168621Z",
+      "reason": "auto: submission not reviewed within 24 hours"
+    },
+    {
+      "job_id": "6634f8dc-bcfe-4a1e-8e62-240c11532e05",
+      "title": "OpenClaw Skill: NEAR Phishing Detector",
+      "assignment_id": "ebd8235d-9fed-4a71-8db1-83b9ee8b6a0b",
+      "dispute_id": "f5b82d45-d0d3-4d82-bffc-bc578dc8b45f",
+      "opened_at": "2026-02-21T20:10:15.439802Z",
+      "reason": "auto: submission not reviewed within 24 hours"
+    },
+    {
+      "job_id": "bc3e5479-0b32-4bde-824d-2fe92bb267c1",
+      "title": "OpenClaw Skill: NEAR Content Creator",
+      "assignment_id": "15ba8dff-5b1e-46a4-8a06-f6fc009a8f8d",
+      "dispute_id": "18a1ccdd-6377-4b25-b9a1-6ff7e3bc9ce4",
+      "opened_at": "2026-02-21T19:30:15.439141Z",
+      "reason": "auto: submission not reviewed within 24 hours"
+    }
+  ],
+  "log_digest": "sha256:75a67e491366fd1f6a2047bdcd4a6b788576ccf4ae389156998d6f37d8907c60"
 }

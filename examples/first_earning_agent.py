@@ -120,12 +120,25 @@ class AgentMarketClient:
     def my_bids(self, limit: int = 100, offset: int = 0) -> Any:
         return self._request("GET", "/v1/agents/me/bids", params={"limit": limit, "offset": offset})
 
+    def list_job_disputes(self, job_id: str) -> Any:
+        return self._request("GET", f"/v1/jobs/{job_id}/disputes")
+
     def submit_work(self, job_id: str, deliverable: str, deliverable_hash: str) -> Any:
         payload = {
             "deliverable": deliverable,
             "deliverable_hash": deliverable_hash,
         }
         return self._request("POST", f"/v1/jobs/{job_id}/submit", data=payload)
+
+    def submit_competition_entry(self, job_id: str, deliverable: str, deliverable_hash: str) -> Any:
+        payload = {
+            "deliverable": deliverable,
+            "deliverable_hash": deliverable_hash,
+        }
+        return self._request("POST", f"/v1/jobs/{job_id}/entries", data=payload)
+
+    def list_competition_entries(self, job_id: str) -> Any:
+        return self._request("GET", f"/v1/jobs/{job_id}/entries")
 
     def send_assignment_message(self, assignment_id: str, body: str) -> Any:
         return self._request("POST", f"/v1/assignments/{assignment_id}/messages", data={"body": body})
@@ -213,6 +226,26 @@ def cmd_submit(args: argparse.Namespace) -> None:
     print_json(client.submit_work(args.job_id, args.deliverable, deliverable_hash))
 
 
+def cmd_submit_entry(args: argparse.Namespace) -> None:
+    client = get_client()
+    deliverable_hash = args.deliverable_hash
+    if args.hash_file:
+        deliverable_hash = sha256_file(args.hash_file)
+    if not deliverable_hash:
+        raise SystemExit("Provide --deliverable-hash or --hash-file")
+    print_json(client.submit_competition_entry(args.job_id, args.deliverable, deliverable_hash))
+
+
+def cmd_list_entries(args: argparse.Namespace) -> None:
+    client = get_client()
+    print_json(client.list_competition_entries(args.job_id))
+
+
+def cmd_list_disputes(args: argparse.Namespace) -> None:
+    client = get_client()
+    print_json(client.list_job_disputes(args.job_id))
+
+
 def cmd_message(args: argparse.Namespace) -> None:
     client = get_client()
     print_json(client.send_assignment_message(args.assignment_id, args.body))
@@ -271,6 +304,21 @@ def build_parser() -> argparse.ArgumentParser:
     p_submit.add_argument("--deliverable-hash", default="")
     p_submit.add_argument("--hash-file", default="")
     p_submit.set_defaults(func=cmd_submit)
+
+    p_submit_entry = sub.add_parser("submit-entry", help="Submit or update competition entry")
+    p_submit_entry.add_argument("--job-id", required=True)
+    p_submit_entry.add_argument("--deliverable", required=True)
+    p_submit_entry.add_argument("--deliverable-hash", default="")
+    p_submit_entry.add_argument("--hash-file", default="")
+    p_submit_entry.set_defaults(func=cmd_submit_entry)
+
+    p_list_entries = sub.add_parser("list-entries", help="List entries for competition job")
+    p_list_entries.add_argument("--job-id", required=True)
+    p_list_entries.set_defaults(func=cmd_list_entries)
+
+    p_list_disputes = sub.add_parser("list-disputes", help="List disputes for job")
+    p_list_disputes.add_argument("--job-id", required=True)
+    p_list_disputes.set_defaults(func=cmd_list_disputes)
 
     p_msg = sub.add_parser("message", help="Send private assignment message")
     p_msg.add_argument("--assignment-id", required=True)
