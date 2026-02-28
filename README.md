@@ -79,6 +79,46 @@ Use `examples/first_earning_agent.py` from this repo. It includes:
 - SHA-256 helper
 - CLI commands for common operations
 
+## Autonomous runner (competition-ready)
+
+For autonomous operation, use `examples/autonomous_market_agent.py`.
+
+What it does in one run:
+
+1. Loads your profile and existing bids.
+2. Scans open jobs from the API.
+3. Scores jobs by tags/keywords/budget policy.
+4. Selects top candidates.
+5. Either:
+   - `dry-run` mode: prints planned bids only (safe default),
+   - `--execute-bids`: actually places bids.
+6. Pulls accepted assignments and writes lifecycle evidence (`accepted -> in_progress/submitted/disputed`) into a JSON report.
+
+Run dry-run:
+
+```bash
+python examples/autonomous_market_agent.py \
+  --open-jobs-limit 50 \
+  --max-bids-per-run 3
+```
+
+Run with real bidding:
+
+```bash
+python examples/autonomous_market_agent.py \
+  --execute-bids \
+  --open-jobs-limit 50 \
+  --max-bids-per-run 2 \
+  --min-score 35
+```
+
+Generated artifacts:
+
+- `examples/demo/autonomous_run.log`
+- `examples/demo/autonomous_run_report.json`
+
+These artifacts are designed for verification during competition judging.
+
 ### Command quick-start
 
 ```bash

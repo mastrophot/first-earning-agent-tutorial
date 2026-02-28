@@ -1,0 +1,155 @@
+{
+  "generated_at": "2026-02-28T18:49:32Z",
+  "agent": {
+    "agent_id": "fe2f00bb-2779-47bd-9820-0d6daf1a83ca",
+    "handle": "gemini__on_near",
+    "tags": null
+  },
+  "mode": "dry-run",
+  "config": {
+    "open_jobs_limit": 60,
+    "bid_scan_limit": 200,
+    "lifecycle_scan_limit": 25,
+    "max_bids_per_run": 3,
+    "min_budget": 3.0,
+    "min_score": 35,
+    "eta_hours": 48,
+    "bid_fraction": 0.9,
+    "bid_floor": 1.5,
+    "tags": [
+      "api",
+      "github-action",
+      "mcp",
+      "near",
+      "pypi",
+      "python"
+    ],
+    "keywords": [
+      "agent",
+      "api",
+      "client",
+      "fastapi",
+      "python",
+      "sdk",
+      "tool"
+    ]
+  },
+  "summary": {
+    "open_jobs_scanned": 60,
+    "my_bids_scanned": 100,
+    "accepted_bids_scanned": 6,
+    "candidate_jobs": 9,
+    "selected_jobs": 3,
+    "actions_performed": 3
+  },
+  "actions": [
+    {
+      "job_id": "2d9bd63a-16f1-4384-8cce-4c3c15445e6e",
+      "title": "GitHub Copilot Chat Command",
+      "action": "dry_run_bid",
+      "proposed_amount": "3.60",
+      "eta_seconds": 172800,
+      "score": 46,
+      "reasons": [
+        "budget>=3.0",
+        "tag_hits=github-action,near",
+        "kw_hits=agent,tool"
+      ]
+    },
+    {
+      "job_id": "3f246f8b-cbfa-44c4-a2f5-a0f9d08ddc3c",
+      "title": "Task 1: MCP Server - Agent Marketplace Integration",
+      "action": "dry_run_bid",
+      "proposed_amount": "2.70",
+      "eta_seconds": 172800,
+      "score": 46,
+      "reasons": [
+        "budget>=3.0",
+        "tag_hits=mcp,near",
+        "kw_hits=agent,tool"
+      ]
+    },
+    {
+      "job_id": "f16d32e9-9d81-4fe4-9dee-5b8ca88d8994",
+      "title": "MCP Server - NFT Minting Cost Calculator",
+      "action": "dry_run_bid",
+      "proposed_amount": "3.60",
+      "eta_seconds": 172800,
+      "score": 41,
+      "reasons": [
+        "budget>=3.0",
+        "tag_hits=mcp,near",
+        "kw_hits=tool"
+      ]
+    }
+  ],
+  "lifecycle_evidence": [
+    {
+      "job_id": "85a6be9b-d740-4ea6-9b8b-19abf7595647",
+      "title": "Create a tutorial: Build Your First Earning AI Agent on market.near.ai",
+      "bid_status": "accepted",
+      "job_status": "in_progress",
+      "assignment_id": "9659e8db-44aa-4e5f-be90-11dd93467378",
+      "assignment_status": "submitted",
+      "submitted_at": "2026-02-28T18:08:52.987800Z",
+      "deliverable_url": null,
+      "escrow_amount": "13.5"
+    },
+    {
+      "job_id": "0d626559-453c-4ac5-ba6c-71ee7953cd24",
+      "title": "Build GitHub Action: NEAR Contract Size Check",
+      "bid_status": "accepted",
+      "job_status": "in_progress",
+      "assignment_id": "d419b49a-6a0b-4202-b5b5-31297484e8b9",
+      "assignment_status": "disputed",
+      "submitted_at": "2026-02-27T07:34:45.953108Z",
+      "deliverable_url": null,
+      "escrow_amount": "4.6"
+    },
+    {
+      "job_id": "75108c4e-0318-45d3-8a9f-4c8a73e4b009",
+      "title": "API - FastAPI",
+      "bid_status": "accepted",
+      "job_status": "in_progress",
+      "assignment_id": "76696e5e-68f0-4a00-9823-7f76af022a2c",
+      "assignment_status": "disputed",
+      "submitted_at": "2026-02-27T08:51:52.502139Z",
+      "deliverable_url": null,
+      "escrow_amount": "4.6"
+    },
+    {
+      "job_id": "3dd0bc6a-9e31-4249-9946-a483b4b8c663",
+      "title": "Build LangChain Tool: NEAR Transaction Builder",
+      "bid_status": "accepted",
+      "job_status": "in_progress",
+      "assignment_id": "1d41bbb9-bd05-456b-a2e8-efddb70e91e7",
+      "assignment_status": "disputed",
+      "submitted_at": "2026-02-27T09:16:31.637327Z",
+      "deliverable_url": null,
+      "escrow_amount": "4.6"
+    },
+    {
+      "job_id": "6634f8dc-bcfe-4a1e-8e62-240c11532e05",
+      "title": "OpenClaw Skill: NEAR Phishing Detector",
+      "bid_status": "accepted",
+      "job_status": "in_progress",
+      "assignment_id": "ebd8235d-9fed-4a71-8db1-83b9ee8b6a0b",
+      "assignment_status": "disputed",
+      "submitted_at": "2026-02-20T20:09:58.375698Z",
+      "deliverable_url": null,
+      "escrow_amount": "5.1"
+    },
+    {
+      "job_id": "bc3e5479-0b32-4bde-824d-2fe92bb267c1",
+      "title": "OpenClaw Skill: NEAR Content Creator",
+      "bid_status": "accepted",
+      "job_status": "in_progress",
+      "assignment_id": "15ba8dff-5b1e-46a4-8a06-f6fc009a8f8d",
+      "assignment_status": "disputed",
+      "submitted_at": "2026-02-20T19:29:20.678581Z",
+      "deliverable_url": null,
+      "escrow_amount": "6.9"
+    }
+  ],
+  "log_digest": "sha256:58251fb1114a2584f6bca14b07a7fa567e9eafbc69accb0313b1d74dfc3e763a"
+}
